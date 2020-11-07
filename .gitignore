@@ -108,3 +108,7 @@ dist
 .theia
 .idea
 DS_Store
+
+# Module build
+core/
+platform-browser/

@@ -2,7 +2,7 @@
 
 import {DataModelBase} from './DataModelBase';
 
-const DATA_MODEL_MIGRATIONS: DataModelBase =
+const DataModelMigrations: DataModelBase =
     {
         '@id': 'https://themost.io/schemas/migrations',
         name: 'Migration',
@@ -35,5 +35,5 @@ const DATA_MODEL_MIGRATIONS: DataModelBase =
     };
 
 export {
-    DATA_MODEL_MIGRATIONS
+    DataModelMigrations
 }

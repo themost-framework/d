@@ -124,7 +124,7 @@ interface DataModelConstraintBase {
   /**
    * A string which represents the type of this constraint e.g. unique
    */
-  type: 'unique';
+  type: 'unique' | string;
   /**
    * A short description for this constraint e.g. Unique identifier field must be unique across different records.
    */
@@ -139,7 +139,7 @@ interface DataEventListenerBase {
   /**
    * A string which the name of this event listener e.g. update person user listener
    */
-  name?: string;
+  name?: any;
   /**
    * A string which represents the path of the module that exports this listener. This path may be a relative to execution folder path of a module exists in package modules e.g. ./listeners/add-user-listener or my-module/send-mail-listener
    */
@@ -181,6 +181,7 @@ interface DataModelViewBase {
    */
   fields?: DataFieldBase[];
   privileges?: DataModelPrivilege[];
+  [k: string]: any;
 }
 
 interface DataFieldBase {
@@ -256,6 +257,7 @@ interface DataFieldBase {
    * An object which represents the validation options of this field
    */
   validation?: DataFieldValidationBase;
+  [k: string]: any;
 }
 
 interface DataModelBase {
@@ -263,10 +265,6 @@ interface DataModelBase {
    * A string which represents the name of this model e.g. Order, Customer, Person etc
    */
   name: string;
-  /**
-   * An optional numeric identifier for this model e.g. 9587891
-   */
-  id?: number;
   /**
    * A string which represents the title of this e.g. Supplier Orders, Person Followers etc
    */
@@ -310,7 +308,7 @@ interface DataModelBase {
   /**
    * A boolean which indicates whether model data will be cached or not. The default value is none -no caching-. A conditional caching allows developers to control caching mechanism while fetching data.
    */
-  caching?: 'none' | 'always' | 'conditional';
+  caching?: 'none' | 'always' | 'conditional' | string;
   /**
    * A collection of fields that belongs to this data model
    */

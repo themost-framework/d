@@ -1,6 +1,6 @@
 // MOST Web Framework Codename ZeroGravity, copyright 2017-2020 THEMOST LP all rights reserved
 
-import {DataConfiguration, DataConfigurationStrategy} from '../src/index';
+import {DataConfiguration, DataConfigurationStrategy} from '@themost/d/core';
 
 describe('DataConfiguration', () => {
     it('should create instance', () => {

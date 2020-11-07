@@ -1,7 +1,7 @@
 // MOST Web Framework Codename ZeroGravity, copyright 2017-2020 THEMOST LP all rights reserved
 
 import {AbstractMethodError, Args, ConfigurationBase, ConfigurationStrategy} from '@themost/common';
-import {DATA_MODEL_MIGRATIONS} from './MigrationDataModel';
+import {DataModelMigrations} from './MigrationDataModel';
 import {DataModelBase} from './DataModelBase';
 
 class SchemaLoaderStrategy extends ConfigurationStrategy {
@@ -10,14 +10,13 @@ class SchemaLoaderStrategy extends ConfigurationStrategy {
 
     constructor(config: ConfigurationBase) {
         super(config);
-        this.set(DATA_MODEL_MIGRATIONS);
+        this.set(DataModelMigrations);
     }
 
     /**
-     * Gets a model definition
      * @param {string} name
      * @returns {*}
-     * @deprecated Use SchemaLoaderStrategy.set(string,any) instead
+     * @deprecated This method is going to be removed in future versions. Use SchemaLoaderStrategy.set(string,any) instead
      */
     getModelDefinition(name: string): any {
         Args.notString(name,'Model name');
@@ -25,10 +24,9 @@ class SchemaLoaderStrategy extends ConfigurationStrategy {
     }
 
     /**
-     * Sets a model definition
-     * @param {*} data
+     * @param {DataModelBase} data
      * @returns {SchemaLoaderStrategy}
-     * @deprecated Use SchemaLoaderStrategy.set(string,any) instead
+     * @deprecated This method is going to be removed in future versions. Use SchemaLoaderStrategy.set(string,any) instead
      */
     setModelDefinition(data: DataModelBase): this {
         return this.set(data);
@@ -44,9 +42,9 @@ class SchemaLoaderStrategy extends ConfigurationStrategy {
 
     /**
      * Sets schema for the specified data model
-     * @param {*} data
+     * @param {DataModelBase} data
      */
-    set(data: any) {
+    set(data: DataModelBase) {
         this._models.set(name, data);
         return this;
     }

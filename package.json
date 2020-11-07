@@ -2,12 +2,6 @@
   "name": "@themost/d",
   "version": "3.0.0",
   "description": "MOST Web Framework Next Generation Data Module",
-  "main": "dist/themost_d.umd.js",
-  "module": "dist/themost_d.esm.js",
-  "files": [
-    "dist"
-  ],
-  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jasmine",
     "karma": "karma",
@@ -60,6 +54,7 @@
     "karma-jasmine-html-reporter": "^1.5.4",
     "karma-spec-reporter": "0.0.32",
     "karma-typescript": "^5.2.0",
+    "module-alias": "^2.2.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.32.1",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -69,5 +64,9 @@
     "ts-node": "^9.0.0",
     "tslint": "^6.1.3",
     "typescript": "^4.0.3"
+  },
+  "_moduleAliases": {
+    "@themost/d/core": "src/core/index" ,
+    "@themost/d/platform-server": "src/core/platform-server"
   }
 }
