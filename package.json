@@ -1,0 +1,73 @@
+{
+  "name": "@themost/d",
+  "version": "3.0.0",
+  "description": "MOST Web Framework Next Generation Data Module",
+  "main": "dist/themost_d.umd.js",
+  "module": "dist/themost_d.esm.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jasmine",
+    "karma": "karma",
+    "karma-test": "karma start",
+    "build": "rimraf dist && rollup -c ./rollup.config.js",
+    "lint": "tslint"
+  },
+  "peerDependencies": {
+    "@themost/common": "^2.5.2",
+    "@themost/q": "^3.0.0",
+    "@themost/xml": "^2.5.1"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themost-framework/d.git"
+  },
+  "author": "Kyriakos Barbounakis <k.barbounakis@gmail.com>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/themost-framework/d/issues"
+  },
+  "homepage": "https://github.com/themost-framework/d#readme",
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "pluralize": "^8.0.0"
+  },
+  "devDependencies": {
+    "@themost/common": "^2.5.2",
+    "@themost/q": "^3.0.0",
+    "@themost/xml": "^2.5.1",
+    "@types/core-js": "^2.5.0",
+    "@types/jasmine": "^3.6.0",
+    "@types/lodash": "^4.14.164",
+    "@types/moment": "^2.13.0",
+    "@types/node": "^10.12.0",
+    "@types/pluralize": "^0.0.29",
+    "@types/sql.js": "^1.0.3",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "jasmine": "^3.5.0",
+    "jasmine-spec-reporter": "^5.0.2",
+    "json-schema-to-typescript": "^9.1.1",
+    "karma": "^5.2.3",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-jasmine-html-reporter": "^1.5.4",
+    "karma-spec-reporter": "0.0.32",
+    "karma-typescript": "^5.2.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.32.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-dts": "^1.4.13",
+    "rollup-plugin-typescript2": "^0.28.0",
+    "sql.js": "^1.4.0",
+    "ts-node": "^9.0.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.3"
+  }
+}
