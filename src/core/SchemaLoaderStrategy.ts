@@ -45,7 +45,7 @@ class SchemaLoaderStrategy extends ConfigurationStrategy {
      * @param {DataModelBase} data
      */
     set(data: DataModelBase) {
-        this._models.set(name, data);
+        this._models.set(data.name, data);
         return this;
     }
 
@@ -62,6 +62,18 @@ class SchemaLoaderStrategy extends ConfigurationStrategy {
     }
 }
 
+interface SchemaLoaderType {
+    loaderType?: any;
+    options?: any;
+}
+
+interface SchemaLoaderConfiguration {
+    usePlural?: boolean;
+    loaders?: SchemaLoaderType[]
+}
+
 export {
-    SchemaLoaderStrategy
+    SchemaLoaderStrategy,
+    SchemaLoaderType,
+    SchemaLoaderConfiguration
 }

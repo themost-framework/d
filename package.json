@@ -67,6 +67,6 @@
   },
   "_moduleAliases": {
     "@themost/d/core": "src/core/index" ,
-    "@themost/d/platform-server": "src/core/platform-server"
+    "@themost/d/platform-server": "src/platform-server/index"
   }
 }

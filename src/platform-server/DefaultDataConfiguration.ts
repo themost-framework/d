@@ -1,19 +1,17 @@
 // MOST Web Framework Codename ZeroGravity, copyright 2017-2020 THEMOST LP all rights reserved
 
 import {ConfigurationBase} from '@themost/common';
-import {DATA_TYPES} from './DataTypes';
 import {
+    DATA_TYPES,
     DataAdapterConfiguration,
     DataAdapterTypeConfiguration,
     DataConfigurationBase,
     DataTypeIndexer
-} from './DataConfigurationBase';
+} from '@themost/d/core';
 
-
-
-class DataConfiguration extends ConfigurationBase implements DataConfigurationBase {
-    constructor() {
-        super();
+class DefaultDataConfiguration extends ConfigurationBase implements DataConfigurationBase {
+    constructor(cwd: string) {
+        super(cwd);
     }
 
     get adapters(): DataAdapterConfiguration[] {
@@ -30,5 +28,5 @@ class DataConfiguration extends ConfigurationBase implements DataConfigurationBa
 }
 
 export {
-    DataConfiguration
+    DefaultDataConfiguration
 }
