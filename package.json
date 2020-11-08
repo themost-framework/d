@@ -2,6 +2,9 @@
   "name": "@themost/d",
   "version": "3.0.0",
   "description": "MOST Web Framework Next Generation Data Module",
+  "type": "core/index.d.ts",
+  "module": "core/index.esm.js",
+  "main": "core/index.umd.js",
   "scripts": {
     "test": "jasmine",
     "karma": "karma",

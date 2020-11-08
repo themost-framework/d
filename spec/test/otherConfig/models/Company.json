@@ -1,0 +1,33 @@
+{
+  "$schema": "https://themost-framework.github.io/themost/models/2018/2/schema.json",
+  "name": "Company",
+  "title": "Companies",
+  "source": "Companies",
+  "view": "Companies",
+  "version": "1.0",
+  "fields": [
+    {
+      "name": "CompanyID",
+      "type": "Integer",
+      "nullable": false,
+      "primary": true,
+      "value":"javascript:return this.newid();"
+    },
+    {
+      "name": "LastName",
+      "type": "Text",
+      "size": 255
+    },
+    {
+      "name": "CompanyName",
+      "type": "Text",
+      "size": 255
+    },
+    {
+      "name": "FoundingDate",
+      "type": "Date"
+    }
+  ],
+  "seed": [
+  ]
+}

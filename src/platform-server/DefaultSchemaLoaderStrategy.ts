@@ -2,10 +2,10 @@
 
 import {ConfigurationBase, Args} from '@themost/common';
 import {FileSchemaLoaderStrategy} from './FileSchemaLoaderStrategy';
-import {SchemaLoaderStrategy, SchemaLoaderConfiguration} from '@themost/d/core';
+import {SchemaLoaderStrategy, SchemaLoaderConfiguration, DataModelBase} from '@themost/d/core';
 
 class DefaultSchemaLoaderStrategy extends FileSchemaLoaderStrategy {
-    public loaders: SchemaLoaderStrategy[];
+    public loaders: SchemaLoaderStrategy[] = [];
     private readonly _options: SchemaLoaderConfiguration;
     constructor(configuration: ConfigurationBase) {
         super(configuration);
@@ -50,6 +50,27 @@ class DefaultSchemaLoaderStrategy extends FileSchemaLoaderStrategy {
                     throw new Error('Schema loader must a string or a class constructor');
                 }
             });
+        }
+    }
+
+    get(name: string): DataModelBase {
+        // call super.get()
+        let res = super.get(name);
+        if (res) {
+            // return schema
+            return res;
+        }
+        // otherwise loop additional loaders
+        for (const loader of this.loaders) {
+            // get schema
+            res = loader.get(name);
+            // if schema found
+            if (res) {
+                // store it
+                this.set(res);
+                // and return
+                return res;
+            }
         }
     }
 }

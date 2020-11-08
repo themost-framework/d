@@ -2,3 +2,4 @@
 
 export * from './DefaultSchemaLoaderStrategy';
 export * from './DefaultDataConfiguration';
+export * from './FileSchemaLoaderStrategy';
