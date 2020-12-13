@@ -9,6 +9,6 @@
     "helpers/ts.js",
     "helpers/reporter.js"
   ],
-  "stopSpecOnExpectationFailure": false,
+  "stopSpecOnExpectationFailure": true,
   "random": false
 }

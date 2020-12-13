@@ -4,4 +4,5 @@ export * from './DataTypes';
 export * from './DataConfigurationBase';
 export * from './DataConfiguration';
 export * from './SchemaLoaderStrategy';
+export * from './DataMapping';
 

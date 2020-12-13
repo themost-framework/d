@@ -268,7 +268,7 @@ interface DataModelBase {
   /**
    * A string which represents the title of this e.g. Supplier Orders, Person Followers etc
    */
-  title: string;
+  title?: string;
   /**
    * A string which represents the model which is inherited by this model e.g. User inherits Account, Person inherits Party etc
    */

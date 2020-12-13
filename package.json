@@ -36,7 +36,7 @@
     "pluralize": "^8.0.0"
   },
   "devDependencies": {
-    "@themost/common": "^2.5.2",
+    "@themost/common": "^2.5.4",
     "@themost/q": "^3.0.0",
     "@themost/xml": "^2.5.1",
     "@types/core-js": "^2.5.0",
@@ -58,6 +58,7 @@
     "karma-spec-reporter": "0.0.32",
     "karma-typescript": "^5.2.0",
     "module-alias": "^2.2.2",
+    "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rollup": "^2.32.1",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -69,7 +70,7 @@
     "typescript": "^4.0.3"
   },
   "_moduleAliases": {
-    "@themost/d/core": "src/core/index" ,
+    "@themost/d/core": "src/core/index",
     "@themost/d/platform-server": "src/platform-server/index"
   }
 }
